@@ -9,11 +9,11 @@ A small, responsive academic website for GitHub Pages. It works as plain HTML, w
 ## Publish on GitHub Pages
 
 1. Create a public repository called `YOUR_USERNAME.github.io`, replacing `YOUR_USERNAME` with your GitHub username. If you already have that repository, use its existing contents as the starting point instead of replacing it blindly.
-2. Put the site files at the root of the repository, preserving the `assets/` and `papers/` folders. Include `index.html`, `research.html`, `headshot.jpeg`, `cv.pdf`, and `.nojekyll`. Upload the extracted files, rather than the ZIP file itself.
+2. Put the site files at the root of the repository, preserving the `assets/` and `papers/` folders. Include `index.html`, `research.html`, `cv.pdf`, and `.nojekyll`. Upload the extracted files, rather than the ZIP file itself.
 3. Open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, then **main** and **/(root)**. Save.
 4. Your site will appear at `https://YOUR_USERNAME.github.io/`. GitHub notes that publication can take up to 10 minutes.
 
-The relative image path also works if you decide to host this as a project site, such as `https://YOUR_USERNAME.github.io/academic-website/`.
+The relative document and stylesheet paths also work if you decide to host this as a project site, such as `https://YOUR_USERNAME.github.io/academic-website/`.
 
 ## Update your bio
 
@@ -66,22 +66,19 @@ Add a navigation link `<a href="#teaching">Teaching</a>`. Insert this section be
 </section>
 ```
 
-## Change your photo or colors
-
-Replace `headshot.jpeg` with a new photo using the same filename. The original image is the publicly posted headshot from your Emory Economics profile.
+## Change your colors
 
 Colors are set near the top of `assets/styles.css` in `:root`. Both pages use this shared stylesheet. The typography uses system fonts, so the site remains readable and does not need to contact a font provider.
 
 ## Review locally
 
-Open `index.html` in your browser. All navigation, email links, and the photo work without running a server. The layout adapts to phones and includes keyboard focus styles, a skip link, reduced-motion support, and print styles.
+Open `index.html` in your browser. Navigation and email links work without running a server. The layout adapts to phones and includes keyboard focus styles, a skip link, reduced-motion support, and print styles. Both pages use a text-only profile with no thumbnail or portrait.
 
 ## Content and design sources
 
-The public profile, photo, email, undergraduate background, and office were checked against:
+The public profile, email, undergraduate background, and office were checked against:
 
 - [Conor Kerr's Emory Economics profile](https://economics.emory.edu/people/doctoral-students/kerr-conor.html)
-- [Public Emory headshot](https://economics.emory.edu/images/headshot/student-graduate/kerr-conor.jpeg)
 
 The site uses the title and econometrics/statistics emphasis you supplied. The CV and research entries use the documents you provided for inclusion on the website. The biography uses your wording “read for an M.Sc.” and includes rowing, coxing for Emory Crew, and watching the Tar Heels.
 
