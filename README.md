@@ -4,90 +4,33 @@ Website: https://ckerr1.github.io/
 
 Repository: https://github.com/ckerr1/ckerr1.github.io
 
-A small, responsive academic website for GitHub Pages. It works as plain HTML, with no installation, build step, external font service, or JavaScript dependency.
+A static website for GitHub Pages. There is no build step or JavaScript dependency.
 
-## Publish on GitHub Pages
+## Edit the site
 
-1. Create a public repository called `YOUR_USERNAME.github.io`, replacing `YOUR_USERNAME` with your GitHub username. If you already have that repository, use its existing contents as the starting point instead of replacing it blindly.
-2. Put `index.html`, `headshot.jpeg`, and `.nojekyll` at the root of the repository. Include this README if useful. Upload the extracted files, rather than the ZIP file itself.
-3. Open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, then **main** and **/(root)**. Save.
-4. Your site will appear at `https://YOUR_USERNAME.github.io/`. GitHub notes that publication can take up to 10 minutes.
+- `index.html` contains the biography, plain-text research interests, and contact details.
+- `research.html` contains the papers and posters reached from the Research navigation tab.
+- `assets/styles.css` controls the shared layout, typography, and colors.
+- `headshot.jpeg` is the profile photo.
 
-The relative image path also works if you decide to host this as a project site, such as `https://YOUR_USERNAME.github.io/academic-website/`.
+The title appears on three lines on both pages: Doctoral Student, Economics, Emory University. Update the `<p class="appointment">` element in both pages to change it. Navigation uses ordinary page links, with the current page marked for accessibility.
 
-## Update your bio
+Edit files on GitHub using the pencil icon, then commit. GitHub Pages publishes the changes automatically from `main`, at the repository root. Preserve `.nojekyll`.
 
-On GitHub, open `index.html`, choose the pencil icon, and find the `ABOUT` comment. Edit the two paragraphs and commit your changes. The site updates automatically when Pages publishes the commit.
+## Add or replace PDFs
 
-Research interests live under the `RESEARCH` comment. Update both the paragraph and list when your interests change. The exact title is in the `<p class="appointment">` element. Contact details appear in both the profile and the Contact section.
+For a CV, upload `cv.pdf` at the repository root and add `<a href="cv.pdf">CV</a>` to the navigation on both pages. Upload research PDFs under `papers/` and link them from the relevant article in `research.html`. Keep filenames the same when replacing documents.
 
-If you change the name, title, or research emphasis, also update the `<title>`, description, and Open Graph text in the document's `<head>`.
+Each paper or poster uses an `<article class="paper">` with a title, bibliographic details, and available links. Use accurate labels such as Paper (PDF), Poster (PDF), Abstract, or Project page. Add document links after the corresponding file is available.
 
-## Add your CV
+## Current research links
 
-Upload a public version of your CV as `cv.pdf` in the repository root. Then replace the navigation comment about your CV with:
+The senior thesis links to the Carolina Digital Repository record identified in the CV. The 2024 insulin poster links to its UNC abstract page; the 2023 training-load poster links to its SAIL project page. The 2022 body-composition entry currently has no verified document link.
 
-```html
-<a href="cv.pdf">CV</a>
-```
+## Sources
 
-Only add the link after the PDF is uploaded. The site currently omits a CV link because a current CV has not been supplied.
+Biographical information and the headshot come from the [Emory profile](https://economics.emory.edu/people/doctoral-students/kerr-conor.html), the supplied CV, and the supplied research documents.
 
-## Add a paper
+Poster records: [UNC insulin abstract](https://our.unc.edu/abstract/kerr-impact-of-copay-coupons-on-diabetes-patients-access-to-insulin/) and [SAIL projects](https://supermariogiacomazzo.github.io/sports-analytics-intelligence-laboratory/projects.html).
 
-Upload the paper as `paper-short-name.pdf`. Add this structure at the end of the Research section, before its closing `</section>`, and replace every example field with real information:
-
-```html
-<article class="paper">
-  <h3>Your actual paper title</h3>
-  <p class="paper-meta">Actual coauthors, if any · Working paper · 2026</p>
-  <p>A short, accurate summary of the question and contribution.</p>
-  <div class="paper-links">
-    <a href="paper-short-name.pdf">Paper</a>
-    <!-- Add a code link only if a public repository exists. -->
-  </div>
-</article>
-```
-
-For several papers, change the section heading to `Research` and group articles under `Working papers`, `Publications`, or `Work in progress` only when those labels accurately describe the work. Do not list course assignments as publications.
-
-## Add teaching
-
-Add a navigation link `<a href="#teaching">Teaching</a>`. Insert this section before Contact, replacing the example with a real appointment:
-
-```html
-<section id="teaching" aria-labelledby="teaching-heading">
-  <h2 id="teaching-heading">Teaching</h2>
-  <ul class="teaching-list">
-    <li>Actual course name — actual role, university, semester.</li>
-  </ul>
-</section>
-```
-
-## Change your photo or colors
-
-Replace `headshot.jpeg` with a new photo using the same filename. The original image is the publicly posted headshot from your Emory Economics profile.
-
-Colors are set near the top of `index.html` in `:root`. The typography uses system fonts, so the site remains readable and does not need to contact a font provider.
-
-## Review locally
-
-Open `index.html` in your browser. All navigation, email links, and the photo work without running a server. The layout adapts to phones and includes keyboard focus styles, a skip link, reduced-motion support, and print styles.
-
-## Content and design sources
-
-The public profile, photo, email, undergraduate background, and office were checked against:
-
-- [Conor Kerr's Emory Economics profile](https://economics.emory.edu/people/doctoral-students/kerr-conor.html)
-- [Public Emory headshot](https://economics.emory.edu/images/headshot/student-graduate/kerr-conor.jpeg)
-
-The site uses the title and econometrics/statistics emphasis you supplied. The Oxford wording says “studied” because the supplied dissertation establishes your program but not the date a degree was formally awarded. No private dissertation, course solutions, or unpublished manuscript is included.
-
-Reference sites reviewed for structure:
-
-- [Aikaterini-Christina Katsimpri](https://akatsim22.github.io/)
-- [Juhee Kim](https://juheekim.org/)
-- [Amy Lim](https://alim415.github.io/)
-- [Pedro H. C. Sant'Anna](https://psantanna.com/)
-
-Publishing instructions were checked against [GitHub's quickstart](https://docs.github.com/en/pages/quickstart) and [publishing-source documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+Design references included the academic sites of [Aikaterini-Christina Katsimpri](https://akatsim22.github.io/), [Juhee Kim](https://juheekim.org/), [Amy Lim](https://alim415.github.io/), and [Pedro H. C. Sant’Anna](https://psantanna.com/).
